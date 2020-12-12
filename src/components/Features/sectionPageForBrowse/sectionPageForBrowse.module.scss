@@ -1,0 +1,65 @@
+@import '../../../styles/variables.scss';
+
+.title{
+    text-align: left;
+    color: $textColorWhite;
+    font-size: 72px;
+    line-height: 72px;
+    margin-bottom: 20px;
+    display: flex;
+    .creatorImage{
+        margin-left: 20px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+}
+.positionsParent{
+    display: flex;
+    margin-bottom: 15px;
+    .profession{
+        text-transform: capitalize;
+        font-weight: 300;
+        font-size: 20px;
+    }
+}
+.text{
+    text-align: left;
+    margin-top: 8px;
+    margin-bottom: 23px;
+    font-size: 16px;
+    font-weight: 300;
+}
+.reactSelect{
+    display: flex;
+    width: 200px;
+    margin-bottom: 50px;
+}
+.monthes{
+    
+    margin-top: 30px;
+    display: flex;
+    font-weight: 300;
+    font-size: 18px;
+    .link{
+        text-decoration: none;
+        color: white;
+    }
+    .active div{
+        opacity: 1;
+    }
+    div{
+        cursor: pointer;
+        opacity: 0.4;
+        border-bottom: 1px solid white;
+        margin-right: 15px;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+@media screen and (max-width:650px){
+    .reactSelect{
+        flex-wrap: wrap;
+    }
+}

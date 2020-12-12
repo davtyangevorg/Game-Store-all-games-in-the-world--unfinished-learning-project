@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+.welcomePage{
+    .link{
+        font-family: 'Ranchers', cursive;
+        text-decoration: none;
+        color: white;
+        font-size: 40px;
+        letter-spacing: 2px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid white;
+        transition: all 0.3s;
+        display: inline-block;
+        &:hover{
+            color: rgba(255, 255, 255, 0.171);
+            border-bottom: 2px solid rgb(69, 235, 19);
+            transform: scale(1.2);
+        }
+    }
+}

@@ -1,0 +1,195 @@
+.pro{
+    position: relative;
+}
+.title{
+    text-align: left;
+    font-size: 75px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.products{
+    display: flex;
+    flex-wrap: wrap;
+}
+.product{
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    height: 320px ;
+    width: 380px;
+    max-width: 80%;
+    .backgroundPhoto{
+        border-radius: 5px;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .product_inner{
+        border-radius: 5px; 
+        background: linear-gradient(180deg, rgba(32,32,32,0.6026785714285714) 48%, rgba(32,32,32,1) 70%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        padding: 32px 20px 20px 20px;
+        .product_inner_top{
+            .creatorImage{
+                border-radius: 50%;
+                width: 130px;
+                height: 130px;
+                margin-bottom: 10px;
+            }
+            .link{
+                color: white;
+                text-decoration: none;
+                transition: all 0.3s;
+                margin-bottom: 5px;
+            }
+            .professionParent{
+                display: flex;
+                text-transform:capitalize ;
+                .profession{
+                    font-size: 12px;
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                    margin-right: 5px;
+
+                }
+            }
+            
+            display: flex;
+            align-items: center;
+            // align-content: center;
+            flex-direction: column;
+            margin-bottom: 30px;
+            .product_inner_top_title{
+                margin: auto;
+                width: 150px;
+                font-size: 25px;
+                margin-bottom: 5px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                transition: all 0.3s;
+                &:hover{
+                    opacity: 0.4;
+                }
+            }
+            .year_start{
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+            button{
+                cursor: pointer;
+                background-color: rgba(255,255,255,0.2);
+                color: white;
+                width: 115px;
+                border: 0;
+                outline: none;
+                font-size: 15px;
+                font-weight: 600;
+                padding: 12px 0;
+                border-radius: 5px;
+                transition: all 0.3s;
+                &:hover{
+                    background-color: white;
+                    color: black;
+                    font-weight: 300;
+                }
+            }
+        }
+        .product_inner_bottom{
+            .items{
+                font-size: 15px;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                padding-bottom: 8px;
+                margin-bottom: 10px;
+                span{
+                    font-weight: 300;
+                    font-size: 14px;
+                    opacity: 0.5;
+                }
+            }
+            .game{
+                display: flex;
+                justify-content: space-between;
+                font-size: 15px;
+                font-weight: 300;
+                margin-bottom: 10px;
+                span{
+                    font-weight: 300;
+                    font-size: 14px;
+                    opacity: 0.5;
+                    margin-right: 3px;
+                }
+                .user_icon{
+                
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
+.exerTop{
+    position: absolute;
+    top: 40px;
+    right: 0;
+    margin-right: 20px;
+}
+.exerBottom{
+    text-align: right;
+    margin-right: 20px;
+}
+.seeMoreBtnNext{
+    text-transform: uppercase;
+    background-color: #373737;
+    color: white;
+    font-weight: 400;
+    padding: 10px 30px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s;
+    &:hover{
+        color: #373737;
+        background-color: white;
+    }
+}
+.display{
+    right: 0px;
+    position: absolute;
+    text-transform: uppercase;
+    background-color: #373737;
+    color: white;
+    font-weight: 400;
+    padding: 10px 30px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s;
+    &:hover{
+        color: #373737;
+        background-color: white;
+    }
+}
+.seeMoreBtnPrev{
+    transform: translateX(-20px);
+    text-transform: uppercase;
+    background-color: #373737;
+    color: white;
+    font-weight: 400;
+    padding: 10px 30px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s;
+    &:hover{
+        color: #373737;
+        background-color: white;
+    }
+}

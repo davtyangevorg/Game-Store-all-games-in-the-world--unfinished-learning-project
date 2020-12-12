@@ -1,0 +1,249 @@
+.gameInfo{
+   // border:1px solid red;
+    padding: 40px 300px 0 300px;
+    .gameInfo_header{
+        display: flex;
+        justify-content: space-between;
+        .gameInfo_header_left{
+            text-align: left;
+            max-width: 530px;
+            .gameInfo_header_left_top{
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+                .relaseDate{
+                    font-size: 13px;
+                    color: black;
+                    font-weight: 400;
+                    padding: 3px 7px;
+                    background-color: white;
+                    border-radius: 5px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    margin-right: 15px;
+                }
+                .platformsName{
+                    display: flex;
+                }
+                .playtime{
+                    font-size: 13px;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                }
+            }
+            .gameInfo_header_left_title{
+                font-size: 70px;
+                line-height: 80px;
+                letter-spacing: 3px;
+                margin-bottom: 20px;
+            }
+            .add_to_btns{
+                margin-bottom: 40px;
+                display: flex;
+                .my_games_btn{
+                    position: relative;
+                    overflow: hidden;
+                    margin-right: 20px;
+                    cursor: pointer;
+                    background-color: white;
+                    border: 0;
+                    border-radius: 5px;
+                    padding:7px 90px 5px 15px;
+                    display: flex;
+                    flex-direction: column;
+                    font-weight: 400;
+                    transition: all 0.3s;
+                    .top_span{
+                        font-size: 12px;
+                        color: rgba(133, 136, 139, 0.87);
+                        margin-bottom: 4px;
+                    }
+                    .bottom_span{
+                        font-size: 18px;
+                    }
+                    .add_to_btn_icon{
+                        position: absolute;
+                        color: #5CA72C;
+                        right: -9px;
+                    }
+                    &:hover{
+                        background-color: rgba(255, 255, 255, 0.781);
+                    }
+                }
+                .wishList_btn{
+                    background-color: rgba(0,0,0,0);
+                    position: relative;
+                    overflow: hidden;
+                    margin-right: 20px;
+                    cursor: pointer;
+                    border: 1px solid white;
+                    border-radius: 5px;
+                    padding:7px 50px 5px 15px;
+                    display: flex;
+                    flex-direction: column;
+                    font-weight: 400;
+                    transition: all 0.3s;
+                    .wishList_btn_icon{
+                        color: white;
+                        position: absolute;
+                        right: -9px;
+                        top: 5px;
+                    }
+                    .bottom_span_wish{
+                        color: white;
+                        font-size: 17px;
+                        .bottom_span_wish_span{
+                            color: rgb(133, 136, 139);
+                            font-size: 15px;
+                            margin-left: 2px;
+                        }
+                    }
+                    .top_span{
+                        font-size: 12px;
+                        color: rgb(133, 136, 139);
+                        margin-bottom: 4px;
+                    }
+                    &:hover{
+                        border: 1px solid rgba(255, 255, 255, 0.274);
+                    }
+                }
+                .save_to_btn{
+                    background-color: rgba(0,0,0,0);
+                    cursor: pointer;
+                    border:0;
+                    padding:7px 0;
+                    display: flex;
+                    flex-direction: column;
+                    font-weight: 400;
+                    .bottom_span_save{
+                        color: white;
+                        font-size: 18px;
+                        display: flex;
+                        font-weight:300;
+                        align-items: center;
+                        transition: all 0.3s;
+                    }
+                    .top_span{
+                        font-size: 12px;
+                        color: rgb(133, 136, 139);
+                        margin-bottom: 0px;
+                    }
+                    .save_to_btn_icon{
+                        margin-left: 7px;
+                        color: white;
+                    }
+                    &:hover .bottom_span_save{
+                        color: rgba(255, 255, 255, 0.199);
+                    }
+                }
+            }
+            .ratings{
+                margin-bottom: 30px;
+                display: flex;
+                .exceptional{
+                    border-right: 1px solid rgba(255, 255, 255, 0.4);
+                    padding-right: 60px;
+                    .exceptional_span{
+                        position: relative;
+                        font-size: 24px;
+                        letter-spacing: 1.5px;
+                        margin-bottom: 20px;
+                    }
+                    .exceptional_href{
+                        width: 110px;
+                        font-size: 13px;
+                        cursor: pointer;
+                        font-weight: 300;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        margin-top: 15px;
+                        color: rgba(255, 255, 255, 0.4);
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+                        transition: all 0.3s;
+                        &:hover{
+                            color: white;
+                        }
+                    }
+                }
+            }
+            .write{
+                margin-bottom: 30px;
+                button{
+                    position: relative;
+                    cursor: pointer;
+                    padding: 15px 25px;
+                    border: 0;
+                    border-radius: 4px;
+                    background-color: #2D2D2D;
+                    color: rgba(255, 255, 255, 0.445);
+                    font-size: 15px;
+                    letter-spacing: 1px;
+                    transition: all 0.3s;
+                    &:hover{
+                        color: black;
+                        background-color: white;
+                    }
+                    margin-right: 15px;
+                    .comment_icon{
+                        position: absolute;
+                        left: 25px;
+                        top: 13px;
+                        transform: rotateY(180deg);
+                    }
+                }
+            }
+            .about{
+                .about_title{
+                    font-size: 25px;
+                    margin-bottom: 8px;
+                }
+                .about_text{
+                    font-size: 16px;
+                    font-weight: 300;
+                    margin-bottom: 30px;
+                    p:nth-child(1){
+                        margin-bottom: 20px;
+                    }
+                    p:nth-child(2){
+                        margin-bottom: 20px;
+                    }
+                }
+                .info_box{
+                    margin-right: 50px;
+                    margin-bottom: 20px;
+                    .span_title{
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: rgba(255, 255, 255, 0.178);
+                        display: inline-block;
+                        margin-bottom: 7px;
+                    }
+                    .parent{
+                        width: 200px;
+                        .span_text{
+                            font-size: 15px;
+                            font-weight: 300;
+                            border-bottom: 1px solid white;
+                            cursor: pointer;
+                        }
+                        .span_comma{
+                            margin-right: 5px;
+                            font-size: 15px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                .metacritic{
+                    border: 1px solid #6dc849;
+                    color: #6dc849;
+                    padding: 5px ;
+                    font-size: 16px;
+                    border-radius: 5px;
+                    width: 32px;
+                    height: 30px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
