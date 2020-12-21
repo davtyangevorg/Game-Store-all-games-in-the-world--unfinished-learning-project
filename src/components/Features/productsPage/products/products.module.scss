@@ -68,13 +68,6 @@
             border-radius: 5px;
             margin-bottom: 10px;
         }
-        .toolsTop{
-            // width: 343px;
-        }
-        .toolsBottom{
-            //width: 100%;
-            //position: absolute;
-        }
         .toolsBottomInner{  
            border: 1px solid green;
             .info{
@@ -254,8 +247,6 @@
     
 }
 @media screen and (max-width:1880px){
-    .products{
-    }
     .product{
         min-width: 440px;
     }

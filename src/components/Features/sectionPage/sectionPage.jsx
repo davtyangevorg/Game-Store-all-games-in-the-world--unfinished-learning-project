@@ -12,7 +12,6 @@ const SectionPage=(props)=>{
     const [order,setOrder]=useState('-added')
     const [platform,setPlatform]=useState(0)   //thomesing  
     useEffect(() => {
-        
         props.getProducts(order,platform,props.date)
     },[])
     const getOrderResponseElements=(value)=>{

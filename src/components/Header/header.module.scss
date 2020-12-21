@@ -18,13 +18,9 @@
         }
     }
     .login{
-        //border:1px solid red;
         width: 250px;
         margin: auto;
         display: flex;
-        // &:last-child{
-        //     margin-right: 0;
-        // }
         .logOutBtn{
             cursor: pointer;
             border-bottom: 2px solid rgba(255,255,255,0);
@@ -153,8 +149,6 @@
 @media screen and (max-width:1024px){
     .header{
         justify-content: space-between;
-        //max-width: 90%;
-        
         img{
             width: 200px;
         }
@@ -179,7 +173,6 @@
     .header{
         flex-direction: column;
         align-items: center;
-        // flex-wrap: wrap ;
         .logo{
             margin-bottom: 15px;
             img{
@@ -189,22 +182,18 @@
         .inputDiv{
             width: 100%;
             margin-bottom: 15px;
+            .searchResults{
+                top: 80px;
+            }
         }
     }
 }
 @media  (max-width:375px){
     .header{
-       
-        // flex-wrap: wrap ;
         .logo{
-            //margin-bottom: 15px;
             img{
                 width: 150px;
             }
-        }
-        .inputDiv{
-            //width: 100%;
-            //margin-bottom: 15px;
         }
     }
 }
