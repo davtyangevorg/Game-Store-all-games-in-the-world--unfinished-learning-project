@@ -4,9 +4,6 @@ import { Route, Redirect, useLocation } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring';
 import style from './App.module.scss';
 
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/firestore';
 
 import loader from './img/svg/preloader.svg'
 import img1 from './img/signin/1.jpg'
@@ -50,8 +47,13 @@ import Publishers from './components/Routes/Browse/publishersContainer.jsx'
 import Creators from './components/Routes/Browse/creatorsContainer.jsx'
 //----------------------------------other routes---------------------------------------------------
 
+
+
 import { IsModalContext, YouTubeVideoUrlContext } from './context.js'
 import { authenticationActionCreator, logOutActionCreator } from './redux/auth-reduser.js'
+
+const firebase = require('firebase/app');
+require('firebase/auth');
 
 
 function App() {
@@ -130,7 +132,6 @@ function App() {
         } className={style.signInBackground}>
           <div className={style.signInBackgroundOpacity}></div>
         </div> : null}
-
       <div className={style.app}>
         <Header />
         <div className={style.appBottom}>

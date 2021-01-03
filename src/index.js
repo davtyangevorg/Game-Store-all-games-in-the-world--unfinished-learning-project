@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { Provider } from 'react-redux'
+import { BrowserRouter } from 'react-router-dom'
+
 import App from './App';
 import store from './redux/store.js'
-import { Provider } from 'react-redux'
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/firestore';
-import { BrowserRouter } from 'react-router-dom'
+
+const firebase = require('firebase/app');
+require('firebase/firestore');
+require('firebase/auth');
 
 const firebaseConfig = {
   apiKey: "AIzaSyBY3wma8N1rU7PYTC66cgBG1XjjAVAoh7c",

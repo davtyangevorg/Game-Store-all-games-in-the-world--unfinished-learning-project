@@ -1,14 +1,15 @@
-import React, { useContext, useEffect, useRef, useState, useLayoutEffect, Fragment } from 'react'
+import React, { useContext, useEffect, useRef, useState, useLayoutEffect, Fragment, useCallback } from 'react'
 import style from './leftSidbar.module.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink, Link } from 'react-router-dom'
-import * as firebase from 'firebase'
 
 import { FaStar, FaGripfire, FaCalendarAlt, FaFastForward, FaCrown, FaChartBar, FaTrophy, FaGamepad, FaDownload, FaGhost, FaUserAlt, FaTags, FaCode, FaCity, FaSignInAlt, FaUserPlus } from 'react-icons/fa'
 
 import { setIsLeftSidbarShowActionCreator } from '../../redux/section-reduser.js'
 import { ThisMonthContext } from './../../context.js'
 
+const firebase = require('firebase/app');
+require('firebase/auth');
 
 const LeftSidbar = () => {
 
@@ -227,20 +228,20 @@ function getScrollPosition({ element, useWindow }) {
 export function useScrollPosition(effect, deps, element, useWindow, wait) {
   const position = useRef(getScrollPosition({ useWindow }))
 
-  let throttleTimeout = null
-
-  const callBack = () => {
-    const currPos = getScrollPosition({ element, useWindow })
-    effect({ prevPos: position.current, currPos })
-    position.current = currPos
-    throttleTimeout = null
-  }
-
+  const throttleTimeout = useRef(null)
+  const callBack = useCallback(
+    () => {
+      const currPos = getScrollPosition({ element, useWindow })
+      effect({ prevPos: position.current, currPos })
+      position.current = currPos
+      throttleTimeout.current = null
+    }, [element, useWindow, effect]
+  )
   useLayoutEffect(() => {
     const handleScroll = () => {
       if (wait) {
-        if (throttleTimeout === null) {
-          throttleTimeout = setTimeout(callBack, wait)
+        if (throttleTimeout.current === null) {
+          throttleTimeout.current = setTimeout(callBack, wait)
         }
       } else {
         callBack()
@@ -250,7 +251,7 @@ export function useScrollPosition(effect, deps, element, useWindow, wait) {
     window.addEventListener('scroll', handleScroll)
 
     return () => window.removeEventListener('scroll', handleScroll)
-  }, deps)
+  }, [deps, callBack, wait])
 }
 
 export default LeftSidbar

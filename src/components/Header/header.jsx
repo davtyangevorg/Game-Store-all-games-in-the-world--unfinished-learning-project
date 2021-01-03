@@ -1,7 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { NavLink, Link, useHistory, useLocation } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import * as firebase from 'firebase'
+
+
 import style from './header.module.scss'
 
 import logo from './../../img/logo.png'
@@ -10,6 +11,8 @@ import { FaXbox, FaWindows, FaTablet, FaAndroid, FaApple, FaLinux, FaPlaystation
 import { getSearchGamesThunkCreator, setIsLeftSidbarShowActionCreator } from '../../redux/section-reduser.js'
 import { getSearchResultsThunkCreator } from '../../redux/gamesInfo-reduser.js'
 
+const firebase = require('firebase/app');
+require('firebase/auth');
 
 const Header = () => {
     const userName = useSelector(state => state.auth.userName)
@@ -29,7 +32,7 @@ const Header = () => {
             return setIsShowBurger(false)
         })
         if (window.innerWidth <= 1024) return setIsShowBurger(true)
-    })
+    },[])
     useEffect(() => {
         if (searchResults.length > 0) setIsShowSearchResults(true)
         if (searchResults.length === 0) setIsShowSearchResults(false)
@@ -72,6 +75,7 @@ const Header = () => {
                 </div>
             </div>
         }
+        return null
     })
 
     const match = useLocation()
@@ -153,7 +157,7 @@ function ClickNotThisElement(ref, set) {
             }
         }
         document.addEventListener("click", handleClickOutside);
-    }, [ref]);
+    }, [ref,set]);
 }
 
 const isPathLoginOrWelcomePage = (path) => {
@@ -163,6 +167,7 @@ const isPathLoginOrWelcomePage = (path) => {
         if (el === 'login' || el === 'signup') {
             isTrue = true
         }
+        return null
     })
     const arr2 = path.split('/')
     if (arr2[0] === '' && arr2[1] === '') { isTrue = true }

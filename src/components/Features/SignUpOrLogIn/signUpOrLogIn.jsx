@@ -3,14 +3,14 @@ import { useDispatch } from 'react-redux'
 import { reduxForm, Field, reset } from 'redux-form'
 import style from './signUpOrLogIn.module.scss'
 
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/firestore';
 
 
 import { required, email, password } from '../validate.js'
 
 import { FaFacebook } from 'react-icons/fa'
+
+const firebase = require('firebase/app');
+require('firebase/auth');
 
 const SignUpOrLogIn = props => {
     const dispatch = useDispatch()
