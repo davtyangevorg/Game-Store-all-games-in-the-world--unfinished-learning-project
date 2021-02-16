@@ -2,7 +2,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 git clone --> npm install --> npm start
 
-for this site i use this https://api.rawg.io/docs/ api and firebase for SignIn SignUp
 
 ## Available Scripts
 
